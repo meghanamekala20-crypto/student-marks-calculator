@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">STUDENT PROJECT</p>
+      <h1>Student Marks Calculator</h1>
+      <p class="subtitle">Enter your marks to calculate your total, percentage, grade, and result.</p>
+    </header>
+
+    <form id="marksForm" class="card">
+      <label for="studentName">Student name</label>
+      <input id="studentName" type="text" placeholder="Enter student name" maxlength="60">
+
+      <div class="section-heading">
+        <h2>Subject marks</h2>
+        <span>Each subject is out of 100</span>
+      </div>
+
+      <div class="subjects">
+        <div class="subject-field">
+          <label for="subject1">Subject 1</label>
+          <input id="subject1" class="mark" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+        </div>
+        <div class="subject-field">
+          <label for="subject2">Subject 2</label>
+          <input id="subject2" class="mark" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+        </div>
+        <div class="subject-field">
+          <label for="subject3">Subject 3</label>
+          <input id="subject3" class="mark" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+        </div>
+        <div class="subject-field">
+          <label for="subject4">Subject 4</label>
+          <input id="subject4" class="mark" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+        </div>
+        <div class="subject-field">
+          <label for="subject5">Subject 5</label>
+          <input id="subject5" class="mark" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+        </div>
+      </div>
+
+      <p class="hint">For this demo, a student must score at least 35 in every subject to pass.</p>
+      <button type="submit">Calculate result</button>
+      <button type="reset" class="secondary">Clear marks</button>
+      <p id="errorMessage" class="error" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section id="result" class="card result" aria-live="polite" hidden>
+      <h2>Calculation result</h2>
+      <p id="greeting" class="greeting"></p>
+      <div class="stats">
+        <div class="stat"><span>Total marks</span><strong id="total">—</strong><small>out of 500</small></div>
+        <div class="stat"><span>Percentage</span><strong id="percentage">—</strong><small>overall score</small></div>
+        <div class="stat"><span>Grade</span><strong id="grade">—</strong><small>based on percentage</small></div>
+      </div>
+      <p id="status" class="status"></p>
+      <p class="grade-note">Grade guide: A+ 90–100%, A 80–89%, B 70–79%, C 60–69%, D 35–59%, F below 35%.</p>
+    </section>
+
+    <footer>Made for learning HTML, CSS, and JavaScript.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
